@@ -7,7 +7,7 @@ using System.Linq;
 public class PoolPreparer : MonoBehaviour
 {
     [SerializeField]
-    PooledMonoBehaviour[] prefabs;
+    public PooledMonoBehaviour[] prefabs;
 
     [SerializeField]
     private int initialPoolSize = 100;
@@ -40,7 +40,7 @@ public class PoolPreparer : MonoBehaviour
         List<GameObject> prefabsToRemove = new List<GameObject>();
         foreach (var prefab in prefabs.Where(t => t != null))
         {
-            if(PrefabUtility.GetPrefabType(prefab) != PrefabType.Prefab)
+            if(!PrefabUtility.IsPartOfPrefabAsset(prefab))
             {
                 Debug.LogError(string.Format("{0} is not a Prefab. It Has Been Removed.", prefab.gameObject.name));
                 prefabsToRemove.Add(prefab.gameObject);

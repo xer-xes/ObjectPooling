@@ -317,7 +317,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 2
-  prefab: {fileID: 6431436342091883228, guid: 0bed8d858cb8f204d999487e45eedd58, type: 3}
+  poolPreparer: {fileID: 1464816677}
 --- !u!1 &1464816676
 GameObject:
   m_ObjectHideFlags: 0
@@ -347,7 +347,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c216aac390e52b4fba3b5aa23c6061f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefabs: []
+  prefabs:
+  - {fileID: 6431436342091883228, guid: 0bed8d858cb8f204d999487e45eedd58, type: 3}
   initialPoolSize: 100
 --- !u!4 &1464816678
 Transform:
